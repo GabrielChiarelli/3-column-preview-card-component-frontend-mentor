@@ -1,0 +1,186 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+/* Vars */
+:root {
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+}
+
+/* Icons */
+.sedans-icon {
+    content: url("../images/icon-sedans.svg");
+    width: 64px;
+    height: 40px;
+}
+
+.suvs-icon {
+    content: url("../images/icon-suvs.svg");
+    width: 64px;
+    height: 40px;
+}
+
+.luxury-icon {
+    content: url("../images/icon-luxury.svg");
+    width: 64px;
+    height: 40px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 50px 0;
+}
+
+.car-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 30px;
+    width: 300px;
+}
+
+.car-card:first-child {
+    border-radius: 20px 20px 0 0;
+}
+
+.car-card:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.car-model {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--light-gray);
+}
+
+.car-description-container {
+    width: 90%;
+}
+
+.car-description-container> p {
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    color: var(--transparent-white);
+}
+
+.learn-more-btn {
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    padding: 10px 0;
+
+    font-family: "Lexend Deca";
+    background-color: var(--light-gray);
+}
+
+.learn-more-btn:hover {
+    cursor: pointer;
+
+    border: 3px solid var(--light-gray);
+    background-color: transparent;
+    color: var(--light-gray);
+}
+
+.sedans-btn {
+    border: 3px solid var(--bright-orange);
+    color: var(--bright-orange);
+}
+
+.suvs-btn {
+    border: 3px solid var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.luxury-btn {
+    border: 3px solid var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+}
+
+/* Footer */
+.attribution {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Landscape */
+@media screen and (min-width: 1000px) {
+    .cards {
+        flex-direction: row;
+    }
+
+    .car-card {
+        gap: 30px;
+        padding: 40px 0 40px 40px;
+    }
+
+    .car-card:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .car-card:last-child {
+        border-radius: 0 10px  10px 0;
+    }
+
+    .car-model {
+        font-size: 2.2rem;
+    }
+
+    .car-description-container {
+        margin-bottom: 50px;
+        width: 77%;
+    }
+
+    .learn-more-btn {
+        padding: 15px 0;
+    }
+}
